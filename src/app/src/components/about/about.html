@@ -1,1 +1,60 @@
-<p>about works!</p>
+<div class="container-background">
+    <div class="container-form">
+
+        <h1 class="title">Sobre mí</h1>
+        <p class="subtitle">Cosas rápidas para que me conozcas un poco 👀</p>
+
+        <div class="accordion">
+
+            <button (click)="toggle('who')">
+                Quién soy
+            </button>
+
+            <div class="panel" *ngIf="open === 'who'">
+                <p>
+                    Soy desarrollador web y me gusta crear cosas que no siempre tienen sentido… pero funcionan.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button (click)="toggle('why')">
+                Por qué esta web
+            </button>
+
+            <div class="panel" *ngIf="open === 'why'">
+                <p>
+                    Me apetecía hacer algo diferente para conocer gente de forma más interesante que un simple “hola”.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="accordion">
+
+            <button (click)="toggle('likes')">
+                Lo que me gusta
+            </button>
+
+            <div class="panel" *ngIf="open === 'likes'">
+                <p>
+                    Programar, videojuegos, ideas raras, y proyectos que empiezan como broma y acaban funcionando.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="instagram-box">
+
+            <p class="subtitle">
+                 Si te apetece cotillear o hablar 👀👇
+            </p>
+
+            <a href="https://instagram.com/{{instagramUser}}" target="_blank" class="instagram-link">
+                Abrir Instagram
+            </a>
+        </div>
+    </div>
+</div>

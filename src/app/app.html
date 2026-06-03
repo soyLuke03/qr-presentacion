@@ -1,1 +1,6 @@
-<router-outlet />
+<div class="container-background">
+    <app-landing *ngIf="view === 'landing'" (start)="goTo($event)"></app-landing>
+    <app-form *ngIf="view === 'form'" (submitAnswer)="goTo($event)"></app-form>
+    <app-success *ngIf="view === 'success'" (clickOnAbout)="goTo($event)" (clickOnLanding)="goTo($event)"></app-success>
+    <app-about *ngIf="view === 'about'"></app-about>
+</div>

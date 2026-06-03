@@ -1,1 +1,45 @@
-<p>form works!</p>
+<div class="container-background">
+  <div class="container-form">
+
+    <h1 class="title">Tengo una pregunta para ti</h1>
+    <p class="subtitle">No te va a llevar más de 30 segundos.</p>
+
+    <form (ngSubmit)="submit()" #form="ngForm">
+
+      <!-- 🧠 poti (NO tocar, oculto) -->
+      <input type="text" name="website" [(ngModel)]="formData.website" class="poti" autocomplete="off" tabindex="-1" />
+
+      <!-- Nombre -->
+      <div class="field">
+        <label>¿Cómo puedo llamarte?</label>
+        <input type="text" name="name" [(ngModel)]="formData.name" (ngModelChange)="updateSubmitState()" required
+          placeholder="Tu nombre" />
+      </div>
+
+      <!-- Edad -->
+      <div class="field">
+        <label>¿Cuántos años tienes? Para evitarnos malentendidos...</label>
+        <input type="number" name="age" [(ngModel)]="formData.age" (ngModelChange)="updateSubmitState()" required
+          min="1" max="120" placeholder="Tu edad" />
+      </div>
+
+      <!-- Instagram -->
+      <div class="field">
+        <label>Tu Instagram (así puedo contactarte si hay match 😏)</label>
+        <input type="text" name="instagram_account" [(ngModel)]="formData.instagram_account"
+          (ngModelChange)="updateSubmitState()" required placeholder="@usuario" />
+      </div>
+
+      <!-- Extra (opcional) -->
+      <div class="field">
+        <label>Cuéntame algo sobre ti (opcional)</label>
+        <textarea name="extra_text" [(ngModel)]="formData.extra_text" (ngModelChange)="updateSubmitState()" rows="3"
+          placeholder="Así sabré más sobre ti, que eso mola..."></textarea>
+      </div>
+
+      <button type="submit" [disabled]="!submitActive || isLoading" (click)="submit()">Enviar →</button>
+
+    </form>
+
+  </div>
+</div>

@@ -1,19 +1,21 @@
 import { Injectable } from '@angular/core';
 import { createClient } from '@supabase/supabase-js';
+import { environmentDev } from '../../environment/environtment.dev';
+import { FormSubmission } from '../models/formSubmission/formSubmission.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Supabase {
+export class SupabaseService {
 
 
   private supabase = createClient(
-    'https://TU_PROYECTO.supabase.co',
-    'TU_ANON_KEY'
+    environmentDev.supabaseUrl,
+    environmentDev.supabaseAnonKey
   );
 
-  async guardarLead(data: any) {
-    return await this.supabase
+  async guardarLead(data: FormSubmission) {
+    const response = await this.supabase
       .from('leads')
       .insert([data]);
   }
