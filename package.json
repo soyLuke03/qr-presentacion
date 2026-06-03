@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:qr-presentacion": "node dist/qr-presentacion/server/server.mjs",
-    "deploy": "ng deploy --base-href=https:/Juegos_estilo_Wordle/ --repo=https://github.com/soyLuke03/guessTheChamp.git"
+    "deploy": "ng deploy --base-href=https:/qr-presentacion/ --repo=https://github.com/soyLuke03/qr-presentacion.git"
   },
   "private": true,
   "packageManager": "npm@11.9.0",
