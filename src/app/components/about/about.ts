@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { environment } from '../../../environment/environtment.prod';
+import { environment } from '../../environment/environtment.prod';
 
 @Component({
   selector: 'app-about',

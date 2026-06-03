@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './src/components/landing/landing';
-import { FormComponent } from './src/components/form/form';
-import { SuccessComponent } from './src/components/success/success';
-import { AboutComponent } from './src/components/about/about';
+import { LandingComponent } from './components/landing/landing';
+import { FormComponent } from './components/form/form';
+import { SuccessComponent } from './components/success/success';
+import { AboutComponent } from './components/about/about';
 
 export const routes: Routes = [
     { path: '', component: LandingComponent },

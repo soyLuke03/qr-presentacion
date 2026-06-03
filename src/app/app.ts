@@ -1,42 +1,30 @@
 import { Component, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { LandingComponent } from './src/components/landing/landing';
-import { AboutComponent } from './src/components/about/about';
-import { FormComponent } from './src/components/form/form';
-import { SuccessComponent } from './src/components/success/success';
 import { CommonModule } from '@angular/common';
-import { ViewState } from './src/models/viewState/viewState.model';
+import { AboutComponent } from './components/about/about';
+import { FormComponent } from './components/form/form';
+import { SuccessComponent } from './components/success/success';
+import { FormsModule } from '@angular/forms';
+import { ViewState } from './models/viewState/viewState.model';
+import { LandingComponent } from './components/landing/landing';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, LandingComponent, AboutComponent, FormComponent, SuccessComponent],
   standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    LandingComponent,
+    AboutComponent,
+    FormComponent,
+    SuccessComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-
-
 export class App {
-  protected readonly title = signal('qr-presentacion');
-
   view: ViewState = ViewState.Landing;
 
-  goToSuccess() {
-    this.view = ViewState.Success;
-  }
-
-  goToAbout() {
-    this.view = ViewState.About;
-  }
-
-  goHome() {
-    this.view = ViewState.Landing;
-  }
-
   goTo(event: ViewState) {
-    this.view = event
+    this.view = event;
   }
 }
-
-
-

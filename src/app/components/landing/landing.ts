@@ -10,10 +10,16 @@ import { ViewState } from '../../models/viewState/viewState.model';
 })
 export class LandingComponent {
 
+  constructor() {
+    console.log('LANDING COMPONENT CREADO');
+  }
+
   @Output() start = new EventEmitter<ViewState>();
 
+  
+
   onStartClick() {
-    console.log("START");
+    console.log("BOTON START");
     
     this.start.emit(ViewState.Form);
   }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { createClient } from '@supabase/supabase-js';
-import { environmentDev } from '../../environment/environtment.dev';
+import { environmentDev } from '../environment/environtment.dev';
 import { FormSubmission } from '../models/formSubmission/formSubmission.model';
 
 @Injectable({
