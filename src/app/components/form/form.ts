@@ -17,7 +17,6 @@ export class FormComponent {
 
   constructor(
     private supabase: SupabaseService,
-    private router: Router
   ) { }
 
   debugMode: boolean = true;
@@ -34,7 +33,7 @@ export class FormComponent {
   lastSubmitTime = 0;
   buttonText = 'Enviar →';
 
-  submitActive = false;
+  submitActive = true;
 
   updateSubmitState() {
     this.submitActive =
