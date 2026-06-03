@@ -1,60 +1,66 @@
 <div class="container-background">
-    <div class="container-form">
+  <div class="container">
 
-        <h1 class="title">Sobre mí</h1>
-        <p class="subtitle">Cosas rápidas para que me conozcas un poco 👀</p>
+    <h1 class="title">Sobre mí</h1>
+    <p class="subtitle">Cosas rápidas para que me conozcas un poco 👀</p>
 
-        <div class="accordion">
+    <div class="accordion">
+      <button (click)="toggle('who')">
+        ¿Quién soy?
+      </button>
 
-            <button (pointerdown)="toggle('who')">
-                Quién soy
-            </button>
-
-            <div class="panel" *ngIf="open === 'who'">
-                <p>
-                    Soy desarrollador web y me gusta crear cosas que no siempre tienen sentido… pero funcionan.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="accordion">
-
-            <button (pointerdown)="toggle('why')">
-                Por qué esta web
-            </button>
-
-            <div class="panel" *ngIf="open === 'why'">
-                <p>
-                    Me apetecía hacer algo diferente para conocer gente de forma más interesante que un simple “hola”.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="accordion">
-
-            <button (pointerdown)="toggle('likes')">
-                Lo que me gusta
-            </button>
-
-            <div class="panel" *ngIf="open === 'likes'">
-                <p>
-                    Programar, videojuegos, ideas raras, y proyectos que empiezan como broma y acaban funcionando.
-                </p>
-            </div>
-
-        </div>
-
-        <div class="instagram-box">
-
-            <p class="subtitle">
-                 Si te apetece cotillear o hablar 👀👇
-            </p>
-
-            <a href="https://instagram.com/{{instagramUser}}" target="_blank" class="instagram-link">
-                Abrir Instagram
-            </a>
-        </div>
+      <div class="panel" [class.open]="open === 'who'">
+        <p>
+          Soy un desarrollador web, friki y gymbro que le gustan hacer ideas y planes raros. Además, este fue mi último invento.
+        </p>
+      </div>
     </div>
+
+    <div class="accordion">
+      <button (click)="toggle('why')">
+        ¿Por qué te he dado esto en lugar de charlar?
+      </button>
+
+      <div class="panel" [class.open]="open === 'why'">
+        <p>
+          Me apetecía hacer algo diferente para conocer gente de forma más interesante que un simple “hola”... Y que soy tímido.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button (click)="toggle('likes')">
+        Lo que me gusta
+      </button>
+
+      <div class="panel" [class.open]="open === 'likes'">
+        <p>
+          Programar, videojuegos, gimnasio, y planes que empiezan como broma y acaban funcionando.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion">
+      <button (click)="toggle('adittional')">
+        Detalles adicionales
+      </button>
+
+      <div class="panel" [class.open]="open === 'adittional'">
+        <p>
+          Si te he parecido majo háblame, cuando me conoces te reirás mucho.
+        </p>
+      </div>
+    </div>
+
+    <div class="instagram-box">
+      <p class="subtitle">
+        Si te apetece cotillear o hablar 👀👇
+      </p>
+
+      <a href="https://instagram.com/{{instagramUser}}" target="_blank" class="instagram-link">
+        Abrir Instagram
+      </a>
+    </div>
+
+  </div>
 </div>

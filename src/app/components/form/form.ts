@@ -19,7 +19,7 @@ export class FormComponent {
     private supabase: SupabaseService,
   ) { }
 
-  debugMode: boolean = true;
+  debugMode: boolean = false;
 
   formData = {
     website: '', // honeypot

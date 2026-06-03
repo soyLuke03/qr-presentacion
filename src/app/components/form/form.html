@@ -1,5 +1,5 @@
 <div class="container-background">
-  <div class="container-form">
+  <div class="container">
 
     <h1 class="title">Tengo una pregunta para ti</h1>
     <p class="subtitle">No te va a llevar más de 30 segundos.</p>
@@ -37,7 +37,7 @@
           placeholder="Así sabré más sobre ti, que eso mola..."></textarea>
       </div>
 
-      <button type="submit" [disabled]="!submitActive || isLoading" (pointerdown)="submit()">Enviar →</button>
+      <button type="submit" [disabled]="!submitActive || isLoading" (click)="submit()">Enviar →</button>
 
     </form>
 
