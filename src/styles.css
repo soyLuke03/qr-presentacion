@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+  background: radial-gradient(circle at top, #0c2852, #000033);
   color: white;
 }
 
